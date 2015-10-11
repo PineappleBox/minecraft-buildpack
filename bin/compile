@@ -42,7 +42,7 @@ unzip ngrok.zip -d $BUILD_DIR/bin > /dev/null 2>&1
 echo "done"
 
 mincraft_version=${MINECRAFT_VERSION:-"1.8.8"}
-minecraft_url="https://s3.amazonaws.com/Minecraft.Download/versions/${mincraft_version}/minecraft_server.${mincraft_version}.jar"
+minecraft_url="https://drone.io/github.com/GlowstonePlusPlus/GlowstonePlusPlus/files/target/glowstone++-1.8.8-SNAPSHOT.jar"
 
 echo -n "-----> Installing Minecraft ${mincraft_version}... "
 curl -o minecraft.jar -s -L $minecraft_url
