@@ -30,10 +30,10 @@ heroku open
 This will open a page in your web browser with the connection address of your server.
 
 ```
-tcp://ngrok.com:45010
+0.tcp.ngrok.io:53313
 ```
 
-Copy the `ngrok.com:45010` part, and paste it into your Minecraft game as the server adress.
+Copy it, and paste it into your Minecraft game as the server adress.
 
 ## Syncing to S3
 
