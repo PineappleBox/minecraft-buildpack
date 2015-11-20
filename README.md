@@ -16,7 +16,7 @@ git commit -m "Initial commit"
 Then, install the [Heroku toolbelt](https://toolbelt.heroku.com/). To create a Heroku app, set your ngrok token, and push
 
 ```bash
-heroku create --buildpack https://github.com/jkutner/heroku-buildpack-minecraft
+heroku create --buildpack https://github.com/mhsjlw/minecraft-buildpack
 heroku config:set NGROK_API_TOKEN="xxxxxxxxxxxxxxx"
 git push heroku master
 ```
