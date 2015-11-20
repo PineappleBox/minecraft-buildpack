@@ -55,7 +55,13 @@ The buildpack will sync your world to the bucket every 60 seconds, but this is c
 
 ### Configuration
 
-You can configure the server properties by creating a `server.properties`
+You can choose the Minecraft version by setting the `MINECRAFT_VERSION` like so:
+
+```bash
+heroku config:set MINECRAFT_VERSION="1.8.3"
+```
+
+You can also configure the server properties by creating a `server.properties`
 file in your project and adding it to git. The various options available are
 described on the [Minecraft wiki](http://minecraft.gamepedia.com/server.properties).
 
