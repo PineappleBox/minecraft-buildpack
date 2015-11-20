@@ -27,8 +27,21 @@ touch banned-players.json
 touch banned-ips.json
 touch ops.json
 
+limit=$(ulimit -u)
+case $limit in
+  512)   # 2X Dyno
+  heap="768m"
+  ;;
+  32768) # PX Dyno
+  heap="4g"
+  ;;
+  *)     # 1X Dyno
+  heap="384m"
+  ;;
+esac
+
 echo "Starting: minecraft ${mc_port}"
-eval "java -Xmx512m -Xms512m -jar minecraft.jar nogui &"
+eval "java -Xmx${heap} -Xms${heap} -jar minecraft.jar nogui &"
 main_pid=$!
 
 trap "kill $ngrok_pid $main_pid $sync_pid" SIGTERM
