@@ -30,13 +30,13 @@ touch ops.json
 limit=$(ulimit -u)
 case $limit in
   512)   # 2X Dyno
-  heap="768m"
+  heap="1600m"
   ;;
   32768) # PX Dyno
-  heap="4g"
+  heap="1600m"
   ;;
   *)     # 1X Dyno
-  heap="384m"
+  heap="1600m"
   ;;
 esac
 
